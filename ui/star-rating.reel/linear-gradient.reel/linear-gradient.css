@@ -1,0 +1,11 @@
+.LinearGradient-lastStop {
+    stop-opacity: 0;
+}
+
+.LinearGradient-firstStop {
+    stop-color: hsla(85, 56%, 34%, 1);
+}
+
+.StarRating-item.active .LinearGradient-firstStop {
+    stop-color: hsla(85, 56%, 41%, 1);
+}

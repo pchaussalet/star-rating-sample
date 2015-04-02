@@ -1,0 +1,8 @@
+.StarRatingItem-star {
+    fill: hsla(0, 100%, 100%, 1);
+    stroke: hsla(85, 56%, 34%, 1);
+    stroke-width: 1;
+    height: 100%;
+    -webkit-flex: 1;
+    pointer-events: none;
+}

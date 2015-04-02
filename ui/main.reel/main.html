@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Main</title>
+
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+    <script type="text/montage-serialization">
+        {
+            "owner": {
+                "properties": {
+                    "element": {"#": "main"}
+                }
+            },
+
+            "starRating": {
+                "prototype": "ui/star-rating.reel",
+                "properties": {
+                    "element": {"#": "starRating"}
+                }
+            },
+
+            "starRatingSmiley": {
+                "prototype": "ui/star-rating.reel",
+                "properties": {
+                    "element": {"#": "starRatingSmiley"}
+                }
+            },
+
+            "starRating10": {
+                "prototype": "ui/star-rating.reel",
+                "properties": {
+                    "element": {"#": "starRating10"},
+                    "numberStar": 10
+                }
+            },
+
+            "starRatingHalfStar": {
+                "prototype": "ui/star-rating.reel",
+                "properties": {
+                    "element": {"#": "starRatingHalfStar"},
+                    "halfStar": true
+                }
+            },
+
+            "starRatingStep": {
+                "prototype": "ui/star-rating.reel",
+                "properties": {
+                    "element": {"#": "starRatingStep"},
+                    "readOnly": true,
+                    "value": 2.7
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <div data-montage-id="main" data-montage-skin="light" class="Main">
+
+        Default: <br />
+        <div data-montage-id="starRating"></div>
+
+        Using data-param: <br />
+        <div data-montage-id="starRatingSmiley" class="starRatingSmiley">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" version="1.1">
+                <circle class="Smiley-head" cx="180" cy="180" r="180" />
+                <circle class="Smiley-left-eye" cx="120" cy="115" r="30" fill="white"/>
+                <circle class="Smiley-left-eye-min" cx="120" cy="115" r="10" />
+                <circle class="Smiley-right-eye" cx="240" cy="115" r="30" fill="white"/>
+                <circle class="Smiley-right-eye-min" cx="240" cy="115" r="10" />
+                <path class="Smiley-smile" d="M 120,240 L 240,240 Z"></path>
+            </svg>
+        </div>
+
+        10 Stars<br />
+        <div data-montage-id="starRating10"></div>
+
+        halfStar property set to true: <br />
+        <div data-montage-id="starRatingHalfStar"></div>
+
+        ReadOnly: <br />
+        <div data-montage-id="starRatingStep"></div>
+    </div>
+</body>
+</html>

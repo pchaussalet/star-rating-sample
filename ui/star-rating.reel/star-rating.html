@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="star-rating.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "owner"}
+            }
+        },
+
+        "stars": {
+            "prototype": "montage/ui/repetition.reel",
+            "properties": {
+                "element": {"#": "stars"}
+            },
+            "bindings": {
+                "content": {"<-": "@owner.numberStar.range()"}
+            }
+        },
+
+        "star": {
+            "prototype": "ui/star-rating.reel/star.reel",
+            "properties": {
+                "element": { "#": "star" }
+            },
+            "bindings": {
+                "index": {"<-": "@stars:iteration.object"}
+            }
+        }
+
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="owner" class="StarRating">
+        <div data-montage-id="stars" class="StarRating-stars">
+            <div data-montage-id="star" class="StarRating-item">
+                <div data-param="*"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
